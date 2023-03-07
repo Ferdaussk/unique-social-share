@@ -408,7 +408,7 @@ class USShareWidget extends Widget_Base{
 		$this->add_group_control(
 			\Elementor\Group_Control_Background::get_type(),
 			[
-				'name' => 'usshare_social_box_bg_grediant_color_hover',
+				'name' => 'usshare_title_color_eeee',
 				'label' => esc_html__('Background', 'unique-social-share'),
 				'types' => ['classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .usshare_style1 .usshare_share_text',
@@ -442,7 +442,7 @@ class USShareWidget extends Widget_Base{
 		$this->add_group_control(
 			\Elementor\Group_Control_Background::get_type(),
 			[
-				'name' => 'usshare_social_box_bg_grediant_color_hover',
+				'name' => 'usshare_title_color_eeee_hover',
 				'label' => esc_html__('Background', 'unique-social-share'),
 				'types' => ['classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .usshare_style1:hover',
