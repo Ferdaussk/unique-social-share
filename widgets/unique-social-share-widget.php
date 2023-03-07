@@ -17,7 +17,7 @@ class USShareWidget extends Widget_Base{
         return esc_html__('Unique Social Share', 'unique-social-share');
     }
     public function get_icon(){
-        return 'usshare-usshare-icon eicon-social-icons';
+        return 'usshare-social-share-icon eicon-social-icons';
     }
     public function get_categories(){
         return ['bwdthebest_general_category'];
