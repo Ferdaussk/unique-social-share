@@ -10,20 +10,20 @@ if (!defined('ABSPATH')){
 
 class USShareWidget extends Widget_Base{
 
-    public function get_name(){
-        return esc_html__('UniqueSocialShare', 'unique-social-share');
-    }
-    public function get_title(){
-        return esc_html__('Unique Social Share', 'unique-social-share');
-    }
-    public function get_icon(){
-        return 'usshare-social-share-icon eicon-social-icons';
-    }
-    public function get_categories(){
-        return ['bwdthebest_general_category'];
-    }
+	public function get_name(){
+		return esc_html__('UniqueSocialShare', 'unique-social-share');
+	}
+	public function get_title(){
+		return esc_html__('Unique Social Share', 'unique-social-share');
+	}
+	public function get_icon(){
+		return 'usshare-social-share-icon eicon-social-icons';
+	}
+	public function get_categories(){
+		return ['bwdthebest_general_category'];
+	}
 	public function get_keywords() {
-		return ['usshare', 'usshares', 'crumb', 'crumbs', 'list', 'header', 'builder'];
+		return ['social', 'shares', 'social-share', 'social-media', 'media', 'plugins', 'developer', 'elementor'];
 	}
 
 	protected function register_controls() {
