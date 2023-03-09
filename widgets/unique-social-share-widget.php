@@ -17,7 +17,7 @@ class USShareWidget extends Widget_Base{
 		return esc_html__('Unique Social Share', 'unique-social-share');
 	}
 	public function get_icon(){
-		return 'usshare-social-share-icon eicon-social-icons';
+		return 'usshare-social-share-icon';
 	}
 	public function get_categories(){
 		return ['bwdthebest_general_category'];
@@ -62,7 +62,21 @@ class USShareWidget extends Widget_Base{
 					'style19' => esc_html__( 'Style 19', 'unique-social-share' ),
 					'style20' => esc_html__( 'Style 20', 'unique-social-share' ),
 					'style21' => esc_html__( 'Style 21', 'unique-social-share' ),
+					'style22' => esc_html__( 'Style 22', 'unique-social-share' ),
+					'style23' => esc_html__( 'Style 23', 'unique-social-share' ),
+					'style24' => esc_html__( 'Style 24', 'unique-social-share' ),
 				],
+			]
+		);
+		$this->add_control(
+			'usshare_main_show_title',
+			[
+				'label' => esc_html__( 'Show Title', 'unique-social-share' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'unique-social-share' ),
+				'label_off' => esc_html__( 'Hide', 'unique-social-share' ),
+				'return_value' => 'yes',
+				'default' => 'no',
 			]
 		);
 		$this->add_control(
@@ -70,11 +84,14 @@ class USShareWidget extends Widget_Base{
 			[
 				'label' => esc_html__( 'Title', 'unique-social-share' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Social Share' , 'unique-social-share' ),
+				'default' => esc_html__( 'Social Share Icon', 'unique-social-share' ),
 				'dynamic'     => [
 					'active' => true,
 				],
 				'label_block' => true,
+				'condition' => [
+					'usshare_main_show_title' => 'yes',
+				],
 			]
 		);
 		$this->end_controls_section();
@@ -82,22 +99,11 @@ class USShareWidget extends Widget_Base{
 		$this->start_controls_section(
 			'usshare_whole_social_icons',
 			array(
-				'label' => esc_html__( 'Make Icons/Links', 'unique-social-share' ),
+				'label' => esc_html__( 'Social Share', 'unique-social-share' ),
 			)
 		);
 		$repeater = new \Elementor\Repeater();
-		$repeater->add_control(
-			'usshare_btn_title',
-			[
-				'label' => esc_html__( 'Title', 'unique-social-share' ),
-				'type' => Controls_Manager::TEXT,
-				'placeholder' => esc_html__( 'Type your social title' , 'unique-social-share' ),
-				'label_block' => true,
-				'dynamic'     => [
-					'active' => true,
-				],
-			]
-		);
+		
 		$repeater->add_control(
 			'usshare_social_type',
 			[
@@ -144,13 +150,103 @@ class USShareWidget extends Widget_Base{
 			]
 		);
 		$repeater->add_control(
+			'usshare_icon_content_type',
+			[
+				'label' => esc_html__( 'Content Type', 'unique-social-share' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'icon',
+				'options' => [
+					'icontext' => esc_html__( 'Icon & Text', 'unique-social-share' ),
+					'icon' => esc_html__( 'Icon', 'unique-social-share' ),
+					'text' => esc_html__( 'Text', 'unique-social-share' ),
+				],
+			]
+		);
+		$repeater->add_control(
+			'usshare_icon_position',
+			[
+				'label' => esc_html__( 'Icon Position', 'unique-social-share' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'before',
+				'options' => [
+					'before' => esc_html__( 'Before', 'unique-social-share' ),
+					'after' => esc_html__( 'After', 'unique-social-share' ),
+				],
+				'condition' => [
+					'usshare_icon_content_type' => 'icontext',
+				],
+			]
+		);
+		$repeater->add_responsive_control(
+			'usshare_btn_icon_spacing',
+			[
+				'label' => esc_html__( 'Icon Spacing', 'unique-social-share' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link.icontext' => 'gap: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'usshare_icon_content_type' => 'icontext',
+				],
+			]
+		);
+		$repeater->add_control(
+			'usshare_btn_iocn_text',
+			[
+				'label' => esc_html__( 'Title', 'unique-social-share' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => esc_html__( 'Facebook' , 'unique-social-share' ),
+				'placeholder' => esc_html__( 'Type your social title' , 'unique-social-share' ),
+				'label_block' => true,
+				'dynamic'     => [
+					'active' => true,
+				],
+				'condition' => [
+					'usshare_icon_content_type' => 'icontext',
+				],
+			]
+		);
+		$repeater->add_control(
+			'usshare_btn_title',
+			[
+				'label' => esc_html__( 'Title', 'unique-social-share' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => esc_html__( 'Facebook' , 'unique-social-share' ),
+				'placeholder' => esc_html__( 'Type your social title' , 'unique-social-share' ),
+				'label_block' => true,
+				'dynamic'     => [
+					'active' => true,
+				],
+				'condition' => [
+					'usshare_icon_content_type' => 'text',
+				],
+			]
+		);
+		$repeater->add_control(
+			'usshare_social_iconstext',
+			[
+				'label' => esc_html__( 'Icon', 'unique-social-share' ),
+				'type' => Controls_Manager::ICONS,
+				'default' => [
+					'value' => 'fab fa-facebook',
+					'library' => 'fa-solid',
+				],
+				'condition' => [
+					'usshare_icon_content_type' => 'icontext',
+				],
+			]
+		);
+		$repeater->add_control(
 			'usshare_social_icons',
 			[
 				'label' => esc_html__( 'Icon', 'unique-social-share' ),
 				'type' => Controls_Manager::ICONS,
 				'default' => [
-					'value' => 'fas fa-circle',
+					'value' => 'fab fa-facebook',
 					'library' => 'fa-solid',
+				],
+				'condition' => [
+					'usshare_icon_content_type' => 'icon',
 				],
 			]
 		);
@@ -166,7 +262,6 @@ class USShareWidget extends Widget_Base{
 				],
 			]
 		);
-
 		// Hover control start for box
 		$repeater->start_controls_tabs(
 			'usshare_social_box_style_share'
@@ -191,7 +286,8 @@ class USShareWidget extends Widget_Base{
 				'label' => esc_html__('Color', 'the-share-timeline'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .usshare_btn_wrap a, {{WRAPPER}} .usshare_btn_wrap i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link i, {{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link' => 'color: {{VALUE}}',
+					'{{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link svg' => 'fill: {{VALUE}}',
 				],
 			]
 		);
@@ -201,14 +297,14 @@ class USShareWidget extends Widget_Base{
 				'name' => 'usshare_social_box_bg_grediant_color',
 				'label' => esc_html__('Background', 'unique-social-share'),
 				'types' => ['classic', 'gradient'],
-				'selector' => '{{WRAPPER}} .usshare_btn_wrap a',
+				'selector' => '{{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link',
 			]
 		);
 		$repeater->add_group_control(
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'usshare_social_box_boxshadow',
-				'label' => esc_html__('Content Shadow', 'unique-social-share'),
+				'label' => esc_html__('Box Shadow', 'unique-social-share'),
 				'selector' => '{{WRAPPER}} .usshare_btn_wrap a',
 			]
 		);
@@ -241,7 +337,8 @@ class USShareWidget extends Widget_Base{
 				'label' => esc_html__('Color', 'the-share-timeline'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .usshare_btn_wrap a:hover, {{WRAPPER}} .usshare_btn_wrap i:hover' => 'color: {{VALUE}}',
+					'{{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link:hover i, {{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link:hover' => 'color: {{VALUE}}',
+					'{{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link:hover svg' => 'fill: {{VALUE}}',
 				],
 			]
 		);
@@ -251,7 +348,7 @@ class USShareWidget extends Widget_Base{
 				'name' => 'usshare_social_box_bg_grediant_color_hover',
 				'label' => esc_html__('Background', 'unique-social-share'),
 				'types' => ['classic', 'gradient'],
-				'selector' => '{{WRAPPER}} .usshare_btn_wrap a:hover',
+				'selector' => '{{WRAPPER}} {{CURRENT_ITEM}} .usshare_btn_link:hover, {{WRAPPER}} {{CURRENT_ITEM}}.usshare_btn_link_wrap a:hover::before',
 			]
 		);
 		$repeater->add_group_control(
@@ -310,7 +407,6 @@ class USShareWidget extends Widget_Base{
 		$this->add_control(
 			'usshare_all_social_btn',
 			[
-				'label' => esc_html__( 'Icons/Links List', 'unique-social-share' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
@@ -346,12 +442,128 @@ class USShareWidget extends Widget_Base{
 				'title_field' => '{{{ usshare_social_type }}}',
 			]
 		);
+		
+		
+		$this->add_control(
+			'usshare_icon_btn_position',
+			[
+				'label' => esc_html__( 'Position', 'unique-social-share' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'inline',
+				'options' => [
+					'inline' => esc_html__( 'Inline', 'unique-social-share' ),
+					'floating' => esc_html__( 'Floating', 'unique-social-share' ),
+				],
+				'prefix_class' => 'usshare-icon-pos-',
+			]
+		);
+		$this->add_control(
+			'usshare_icon_align',
+			[
+				'label' => esc_html__( 'Alignment', 'unique-social-share' ),
+				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'options' => [
+					'left' => [
+						'title' => esc_html__( 'Left', 'unique-social-share' ),
+						'icon' => 'eicon-text-align-left',
+					],
+					'right' => [
+						'title' => esc_html__( 'Right', 'unique-social-share' ),
+						'icon' => 'eicon-text-align-right',
+					],
+				],
+				'toggle' => true,
+				'condition' => [
+					'usshare_icon_btn_position' => 'floating',
+				],
+				'prefix_class' => 'usshare-icon-align-',
+			]
+		);
+		$this->add_responsive_control(
+			'usshare_btn_icon_vertical_pos',
+			[
+				'label' => esc_html__( 'Vertical Position', 'unique-social-share' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'default' => [
+					'unit' => '%',
+					'size' => 20,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .usshare_btn_wrap .main-container' => 'top: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'usshare_icon_btn_position' => 'floating',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'usshare_btn_icon_horizontal_pos_left',
+			[
+				'label' => esc_html__( 'Horizontal Position', 'unique-social-share' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'default' => [
+					'unit' => '%',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .usshare_btn_wrap .main-container' => 'left: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'usshare_icon_btn_position' => 'floating',
+					'usshare_icon_align' => 'left',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'usshare_btn_icon_horizontal_pos_right',
+			[
+				'label' => esc_html__( 'Horizontal Position', 'unique-social-share' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'default' => [
+					'unit' => '%',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .usshare_btn_wrap .main-container' => 'right: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'usshare_icon_btn_position' => 'floating',
+					'usshare_icon_align' => 'right',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'usshare_btn_alignment',
+			[
+				'label' => esc_html__( 'Alignment', 'unique-social-share' ),
+				'type' => Controls_Manager::CHOOSE,
+				'options' => [
+					'start' => [
+						'title' => esc_html__( 'Left', 'unique-social-share' ),
+						'icon' => 'eicon-h-align-left',
+					],
+					'center' => [
+						'title' => esc_html__( 'Center', 'unique-social-share' ),
+						'icon' => 'eicon-h-align-center',
+					],
+					'end' => [
+						'title' => esc_html__( 'Right', 'unique-social-share' ),
+						'icon' => ' eicon-h-align-right',
+					],
+				],
+				'toggle' => true,
+				'selectors' => [
+					'{{WRAPPER}} .usshare_btn_wrap .main-container, {{WRAPPER}} .usshare_btn_wrap.usshare_style17' => 'justify-content: {{VALUE}};',
+				],
+				'condition' => [
+					'usshare_icon_btn_position' => 'inline',
+				],
+			]
+		);
 		$this->end_controls_section();
 
 		$this->start_controls_section(
 			'usshare_social_title_style',
 			[
-				'label' => esc_html__( 'Wraper', 'unique-social-share' ),
+				'label' => esc_html__( 'Wrapper', 'unique-social-share' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -361,7 +573,7 @@ class USShareWidget extends Widget_Base{
 				'label' => esc_html__( 'Alignment', 'unique-social-share' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
-					'left' => [
+					'start' => [
 						'title' => esc_html__( 'Left', 'unique-social-share' ),
 						'icon' => 'eicon-h-align-left',
 					],
@@ -369,12 +581,15 @@ class USShareWidget extends Widget_Base{
 						'title' => esc_html__( 'Center', 'unique-social-share' ),
 						'icon' => 'eicon-h-align-center',
 					],
-					'right' => [
+					'end' => [
 						'title' => esc_html__( 'Right', 'unique-social-share' ),
 						'icon' => ' eicon-h-align-right',
 					],
 				],
 				'toggle' => true,
+				'selectors' => [
+					'{{WRAPPER}} .usshare_btn_wrap .usshare_share_text' => 'text-align: {{VALUE}};',
+				],
 			]
 		);
 		// Hover control start for title
@@ -408,10 +623,10 @@ class USShareWidget extends Widget_Base{
 		$this->add_group_control(
 			\Elementor\Group_Control_Background::get_type(),
 			[
-				'name' => 'usshare_title_color_eeee',
+				'name' => 'usshare_social_box_bg_grediant_color_hovere',
 				'label' => esc_html__('Background', 'unique-social-share'),
 				'types' => ['classic', 'gradient'],
-				'selector' => '{{WRAPPER}} .usshare_style1 .usshare_share_text',
+				'selector' => '{{WRAPPER}} .usshare_btn_wrap .usshare_share_text',
 			]
 		);
 		$this->end_controls_tab();
@@ -442,7 +657,7 @@ class USShareWidget extends Widget_Base{
 		$this->add_group_control(
 			\Elementor\Group_Control_Background::get_type(),
 			[
-				'name' => 'usshare_title_color_eeee_hover',
+				'name' => 'usshare_social_box_bg_grediant_color_hoverr',
 				'label' => esc_html__('Background', 'unique-social-share'),
 				'types' => ['classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .usshare_style1:hover',
@@ -506,12 +721,18 @@ class USShareWidget extends Widget_Base{
 
 	protected function render(){
 		$settings = $this->get_settings_for_display();
+
 		echo '<div class="usshare_btn_wrap usshare_'.$settings['usshare_presets_style'].'">';
+		if($settings['usshare_main_show_title'] === 'yes') {
 			echo '<span class="usshare_share_text">'.$settings['usshare_main_title'].'</span>';
-			echo '<div class="container">';
+		}
+			echo '<div class="main-container">';
 				foreach (  $settings['usshare_all_social_btn'] as $usshare_btn ) {
 					$types = $usshare_btn['usshare_social_type'];
 					$social_title = $usshare_btn['usshare_btn_title'];
+					$social_icon_text = $usshare_btn['usshare_btn_iocn_text'];
+					$social_cont = $usshare_btn['usshare_icon_content_type'];
+					$icon_pos = $usshare_btn['usshare_icon_position'];
 					$current = get_the_permalink();
 					$titlE = get_the_title();
 					$link = $usshare_btn['usshare_custom_link']['url'];
@@ -550,10 +771,16 @@ class USShareWidget extends Widget_Base{
 						elseif($types == 'baidu'): $usshare_Alink = (!empty($link))?'http://cang.baidu.com/do/add?iu=&it=&fr=ien#nw=1&iu=&link='.$link:'http://cang.baidu.com/do/add?iu=&it=&fr=ien#nw=1&iu=&link='.esc_url($current).'&title='.esc_attr($titlE);
 							elseif($types == 'line'): $usshare_Alink = (!empty($link))?'https://line.me/R/msg/text/?'.$link:'https://line.me/R/msg/text/?'.$titlE.'%0A'.$current;
 					endif;
-					echo '<div class="usshare_btn_link_wrap usshare-repeater-btn-' . esc_attr( $usshare_btn['_id'] ) . '">';
-						echo '<a class="usshare_btn_link" href="'.$usshare_Alink.'" target="_blank">'; 
-							\Elementor\Icons_Manager::render_icon( $usshare_btn['usshare_social_icons'], [ 'aria-hidden' => 'true' ] ); 
-							echo (!empty($social_title))?$social_title:'';
+					echo '<div class="usshare_btn_link_wrap elementor-repeater-item-' . esc_attr( $usshare_btn['_id'] ) . '">';
+						?><a class="usshare_btn_link" href="<?php echo $usshare_Alink; ?>" onclick="window.open(this.href, '_blank', 'width=400,height=400,left='+screen.width/2.5+',top='+screen.height/3); return false;"><?php
+						if($usshare_btn['usshare_icon_content_type'] === 'icontext') :
+							 \Elementor\Icons_Manager::render_icon( $usshare_btn['usshare_social_iconstext'], [ 'aria-hidden' => 'true' ] ); 
+							echo esc_html($social_icon_text);
+						elseif($usshare_btn['usshare_icon_content_type'] === 'icon') :	
+						 \Elementor\Icons_Manager::render_icon( $usshare_btn['usshare_social_icons'], [ 'aria-hidden' => 'true' ] ); 
+						elseif($usshare_btn['usshare_icon_content_type'] === 'text') :
+							echo esc_html($social_title);
+						endif;		
 						echo '</a>';
 					echo '</div>';
 				}

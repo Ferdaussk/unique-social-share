@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2023 by original authors @ fontello.com</metadata>
+<defs>
+<font id="share-icon" horiz-adv-x="1000" >
+<font-face font-family="share-icon" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="share" unicode="&#xe801;" d="M799 127q46 0 79-33t33-79-33-79-78-33-79 33-33 80q0 18 8 39l-169 122q-49-50-118-50t-118 49-50 119q0 9 3 26l-134 44q-16-14-36-14-24 0-40 16t-16 40 16 39 40 16q20 0 34-13t19-31l135-45q21 41 61 65t86 24q52 0 96-31l199 199q-16 30-16 55 0 46 33 79t79 33 78-33 33-79-33-78-79-33q-26 0-55 17l-199-200q31-44 31-96 0-37-17-73l169-121q33 26 71 26z" horiz-adv-x="928" />
+</font>
+</defs>
+</svg>

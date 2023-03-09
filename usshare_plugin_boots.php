@@ -68,7 +68,7 @@ class ClassUSShareBoots {
 
 	public function usshare_all_assets_for_elementor_editor_admin(){
 		$all_css_js_file = array(
-			'usshare_breadcrumb_admin_icon_css' => array('usshare_path_admin_define'=>USSHARE_ASFSK_ASSETS_ADMIN_DIR_FILE . '/icon.css'),
+			'usshare_breadcrumb_admin_icon_css' => array('usshare_path_admin_define'=>USSHARE_ASFSK_ASSETS_ADMIN_DIR_FILE . '/css/icon.css'),
 		);
 
 		foreach($all_css_js_file as $handle => $fileinfo){

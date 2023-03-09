@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Unique Social Share\n"
-"POT-Creation-Date: 2023-03-07 17:25+0600\n"
-"PO-Revision-Date: 2023-03-07 17:25+0600\n"
+"POT-Creation-Date: 2023-03-09 09:57+0600\n"
+"PO-Revision-Date: 2023-03-09 09:56+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,8 +22,8 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #. Plugin Name of the plugin/theme
-#: page-settings/usshare-manager.php:21 unique-social-share.php:67
-#: unique-social-share.php:82 widgets/unique-social-share-widget.php:17
+#: page-settings/usshare-manager.php:21 unique-social-share.php:68
+#: unique-social-share.php:83 widgets/unique-social-share-widget.php:17
 msgid "Unique Social Share"
 msgstr ""
 
@@ -32,26 +32,27 @@ msgid "Settings"
 msgstr ""
 
 #: page-settings/usshare-manager.php:40 page-settings/usshare-manager.php:42
-#: widgets/unique-social-share-widget.php:71
-#: widgets/unique-social-share-widget.php:92
+#: widgets/unique-social-share-widget.php:74
+#: widgets/unique-social-share-widget.php:153
+#: widgets/unique-social-share-widget.php:169
 msgid "Title"
 msgstr ""
 
-#: unique-social-share.php:66 unique-social-share.php:81
+#: unique-social-share.php:67 unique-social-share.php:82
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: unique-social-share.php:68
+#: unique-social-share.php:69
 msgid "Elementor"
 msgstr ""
 
-#: unique-social-share.php:72 unique-social-share.php:87
+#: unique-social-share.php:73 unique-social-share.php:88
 #, php-format
 msgid "%1$s"
 msgstr ""
 
-#: unique-social-share.php:83
+#: unique-social-share.php:84
 msgid "PHP"
 msgstr ""
 
@@ -155,262 +156,324 @@ msgstr ""
 msgid "Style 21"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:73
-msgid "Social Share"
+#: widgets/unique-social-share-widget.php:65
+msgid "Style 22"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:85
+#: widgets/unique-social-share-widget.php:66
+msgid "Style 23"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:67
+msgid "Style 24"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:87
 msgid "Make Icons/Links"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:94
-msgid "Type your social title"
-msgstr ""
-
-#: widgets/unique-social-share-widget.php:104
+#: widgets/unique-social-share-widget.php:95
 msgid "Networks"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:107
+#: widgets/unique-social-share-widget.php:98
+#: widgets/unique-social-share-widget.php:155
+#: widgets/unique-social-share-widget.php:171
 msgid "Facebook"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:108
+#: widgets/unique-social-share-widget.php:99
 msgid "Twitter"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:109
+#: widgets/unique-social-share-widget.php:100
 msgid "Linkedin"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:110
+#: widgets/unique-social-share-widget.php:101
 msgid "Instagram"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:111
+#: widgets/unique-social-share-widget.php:102
 msgid "Email"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:112
+#: widgets/unique-social-share-widget.php:103
 msgid "Whatsapp"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:113
+#: widgets/unique-social-share-widget.php:104
 msgid "Youtube"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:114
+#: widgets/unique-social-share-widget.php:105
 msgid "Telegram"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:115
+#: widgets/unique-social-share-widget.php:106
 msgid "Viber"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:116
+#: widgets/unique-social-share-widget.php:107
 msgid "Pinterest"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:117
+#: widgets/unique-social-share-widget.php:108
 msgid "Tumblr"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:118
+#: widgets/unique-social-share-widget.php:109
 msgid "Reddit"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:119
+#: widgets/unique-social-share-widget.php:110
 msgid "VK"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:120
+#: widgets/unique-social-share-widget.php:111
 msgid "Xing"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:121
+#: widgets/unique-social-share-widget.php:112
 msgid "Get Pocket"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:122
+#: widgets/unique-social-share-widget.php:113
 msgid "Digg"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:123
+#: widgets/unique-social-share-widget.php:114
 msgid "StumbleUpon"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:124
+#: widgets/unique-social-share-widget.php:115
 msgid "Weibo"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:125
+#: widgets/unique-social-share-widget.php:116
 msgid "Renren"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:126
+#: widgets/unique-social-share-widget.php:117
 msgid "Skype"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:127
+#: widgets/unique-social-share-widget.php:118
 msgid "Quora"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:128
+#: widgets/unique-social-share-widget.php:119
 msgid "Snapchat"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:129
+#: widgets/unique-social-share-widget.php:120
 msgid "Flicker"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:130
+#: widgets/unique-social-share-widget.php:121
 msgid "Odnoklassniki"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:131
+#: widgets/unique-social-share-widget.php:122
 msgid "Moimir"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:132
+#: widgets/unique-social-share-widget.php:123
 msgid "Blogger"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:133
+#: widgets/unique-social-share-widget.php:124
 msgid "Evernote"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:134
+#: widgets/unique-social-share-widget.php:125
 msgid "Delicious"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:135
+#: widgets/unique-social-share-widget.php:126
 msgid "Surfingbird"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:136
+#: widgets/unique-social-share-widget.php:127
 msgid "Liveinternet"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:137
+#: widgets/unique-social-share-widget.php:128
 msgid "Buffer"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:138
+#: widgets/unique-social-share-widget.php:129
 msgid "Instapaper"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:139
+#: widgets/unique-social-share-widget.php:130
 msgid "WordPress"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:140
+#: widgets/unique-social-share-widget.php:131
 msgid "Baidu"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:141
+#: widgets/unique-social-share-widget.php:132
 msgid "Line"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:149
+#: widgets/unique-social-share-widget.php:140
+msgid "Content Type"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:144
+msgid "Icon & Text"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:145
+#: widgets/unique-social-share-widget.php:185
+#: widgets/unique-social-share-widget.php:199
 msgid "Icon"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:160
+#: widgets/unique-social-share-widget.php:146
+msgid "Text"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:156
+#: widgets/unique-social-share-widget.php:172
+msgid "Type your social title"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:213
 msgid "Custom Link"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:161
+#: widgets/unique-social-share-widget.php:214
 msgid "https://your-share-link.com"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:177
-#: widgets/unique-social-share-widget.php:387
+#: widgets/unique-social-share-widget.php:229
+#: widgets/unique-social-share-widget.php:535
 msgid "Normal"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:191
-#: widgets/unique-social-share-widget.php:241
-#: widgets/unique-social-share-widget.php:401
+#: widgets/unique-social-share-widget.php:243
+#: widgets/unique-social-share-widget.php:294
+#: widgets/unique-social-share-widget.php:549
 msgid "Color"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:202
-#: widgets/unique-social-share-widget.php:252
-#: widgets/unique-social-share-widget.php:412
-#: widgets/unique-social-share-widget.php:446
+#: widgets/unique-social-share-widget.php:255
+#: widgets/unique-social-share-widget.php:306
+#: widgets/unique-social-share-widget.php:560
+#: widgets/unique-social-share-widget.php:594
 msgid "Background"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:211
+#: widgets/unique-social-share-widget.php:264
 msgid "Content Shadow"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:219
-#: widgets/unique-social-share-widget.php:269
-#: widgets/unique-social-share-widget.php:458
+#: widgets/unique-social-share-widget.php:272
+#: widgets/unique-social-share-widget.php:323
+#: widgets/unique-social-share-widget.php:606
 msgid "Border"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:227
-#: widgets/unique-social-share-widget.php:421
+#: widgets/unique-social-share-widget.php:280
+#: widgets/unique-social-share-widget.php:569
 msgid "Hover"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:261
-#: widgets/unique-social-share-widget.php:478
+#: widgets/unique-social-share-widget.php:315
+#: widgets/unique-social-share-widget.php:626
 msgid "Box Shadow"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:279
-#: widgets/unique-social-share-widget.php:466
+#: widgets/unique-social-share-widget.php:333
+#: widgets/unique-social-share-widget.php:614
 msgid "Border Radius"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:291
-#: widgets/unique-social-share-widget.php:496
+#: widgets/unique-social-share-widget.php:345
+#: widgets/unique-social-share-widget.php:644
 msgid "Margin"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:302
-#: widgets/unique-social-share-widget.php:485
+#: widgets/unique-social-share-widget.php:356
+#: widgets/unique-social-share-widget.php:633
 msgid "Padding"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:313
-msgid "Icons/Links List"
+#: widgets/unique-social-share-widget.php:367
+msgid "Social Share"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:354
-msgid "Wraper"
+#: widgets/unique-social-share-widget.php:407
+msgid "Icon Position"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:361
+#: widgets/unique-social-share-widget.php:411
+msgid "Before"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:412
+msgid "After"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:420
+msgid "Position"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:424
+msgid "Inline"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:425
+msgid "Floating"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:433
+#: widgets/unique-social-share-widget.php:509
 msgid "Alignment"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:365
+#: widgets/unique-social-share-widget.php:437
+#: widgets/unique-social-share-widget.php:513
 msgid "Left"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:369
-msgid "Center"
-msgstr ""
-
-#: widgets/unique-social-share-widget.php:373
+#: widgets/unique-social-share-widget.php:441
+#: widgets/unique-social-share-widget.php:521
 msgid "Right"
 msgstr ""
 
-#: widgets/unique-social-share-widget.php:435
+#: widgets/unique-social-share-widget.php:455
+msgid "Vertical Position"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:472
+#: widgets/unique-social-share-widget.php:486
+msgid "Horizontal Position"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:502
+msgid "Wrapper"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:517
+msgid "Center"
+msgstr ""
+
+#: widgets/unique-social-share-widget.php:583
 msgid "Hover Color"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://bwdplugins.com/plugins/unique-social-share"
+msgid "https://bestwpdeveloper.com/social-share"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Unique Social Share plugin with 23+ types of  Share Effects for Elementor."
+"Unique Social Share plugin with 23+ types of  Share ready-made design for "
+"Elementor."
 msgstr ""
 
 #. Author of the plugin/theme

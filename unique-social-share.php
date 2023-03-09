@@ -1,13 +1,14 @@
 <?php
 /**
  * Plugin Name: Unique Social Share
- * Description: Unique Social Share plugin with 23+ types of  Share Effects for Elementor.
- * Plugin URI:  https://bwdplugins.com/plugins/unique-social-share
+ * Description: Unique Social Share plugin with 23+ types of  Share ready-made design for Elementor.
+ * Plugin URI:  https://bestwpdeveloper.com/social-share
  * Version:     1.0
  * Author:      Best WP Developer
  * Author URI:  https://bestwpdeveloper.com/
  * Text Domain: unique-social-share
  * Elementor tested up to: 3.0.0
+ * Elementor Pro tested up to: 3.7.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
